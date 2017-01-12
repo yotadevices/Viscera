@@ -155,6 +155,23 @@ public class MainActivity extends Activity implements SomeScreen {
 
 ```
 
+## Integration
+The library is published to the jcenter repository, thus your *project's* `build.gradle` must contain:
+
+```groovy
+repositories {
+    jcenter()
+}
+```
+
+To use this library add following to your *module's* `build.gradle`:
+
+```groovy
+dependencies {
+    compile 'com.yotadevices.viscera:core:0.3.1'
+}
+```
+
 ### Why to use
 It is tiny (8Kb jar without Proguard) and simple.
 It is quite useful for small and medium projects (There are no huge projects built upon the Viscera framework). However, for big projects you'd maybe prefer to use something like *Moxy* with something like *Dagger 2*.
@@ -162,7 +179,6 @@ It is quite useful for small and medium projects (There are no huge projects bui
 ### TODO
 `Container.getInstance().get(MainModule.class).attach(this).update(this);`. Maybe it is useful, pretty ugly, though.
 Also, there is some code, which we don't actually want to write (e.g. init module in an `Application` class or making a `Module` by ourself).
-* Publish to Maven Central;
 * Cover with unit tests;
 * Enable Proguard;
 * Add code generation, which would make decorator to attach screens to modules, update modules and detach screens from them;
