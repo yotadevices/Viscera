@@ -15,6 +15,40 @@
  */
 
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+ext {
+    bintrayRepo      = 'maven'
+    bintrayName      = 'viscera'
+
+    publishedGroupId = 'com.yotadevices.viscera'
+    libName          = 'core'
+    artifact         = 'core'
+
+    libDescription   = "Tiny MVP and Dependency Injection plugin for Android."
+
+    siteUrl          = 'https://github.com/yotadevices/Viscera'
+    gitUrl           = 'https://github.com/yotadevices/Viscera.git'
+
+    developerId      = "dmitvitalii"
+    developerName    = "Vitalii Dmitriev"
+    developerEmail   = "dmit.vitalii@gmail.com"
+
+    libraryVersion   = "${majorVersion}.${minorVersion}"
+
+    licenseName      = 'The Apache Software License, Version 2.0'
+    licenseUrl       = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses      = ["Apache-2.0"]
+}
+
+publishing {
+    publications {
+        MySDK(MavenPublication) {
+            groupId publishedGroupId
+            version libraryVersion
+        }
+    }
+}
 
 android {
     compileSdkVersion 25
@@ -22,7 +56,10 @@ android {
     defaultConfig {
         minSdkVersion 1
         targetSdkVersion 25
-        versionCode 0
-        versionName "0.3"
+        versionCode majorVersion
+        versionName "${majorVersion}.${minorVersion}"
     }
 }
+
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
