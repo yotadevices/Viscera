@@ -54,7 +54,7 @@ Viscera plugin also provides an optional `State` helper, which can help to manag
 public class CoolState extends State<SuperPresenter> {
 
     @Override
-    public void apply(ViewGroup root, TutorialPresenter presenter) {
+    public void apply(ViewGroup root, SuperPresenter presenter) {
         View.inflate(root.getContext(), R.layout.example, root);
         TextView label = (TextView) root.findViewById(R.id.label_text);
         label.setText("Hello, world!");
