@@ -134,7 +134,7 @@ public class MainActivity extends Activity implements SomeScreen {
     public void onResume() {
         super.onResume();
         // Do it carefully and only if you really
-        // need to update when the onUpdate() is called!
+        // need to update when onResume() is called!
         mModule.update(this);
     }
 
