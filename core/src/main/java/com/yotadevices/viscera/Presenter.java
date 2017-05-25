@@ -1,5 +1,3 @@
-package com.yotadevices.viscera;
-
 /*
  * Copyright (C) 2016 Yota Devices LLC
  *
@@ -15,6 +13,7 @@ package com.yotadevices.viscera;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.yotadevices.viscera;
 
 /**
  * The {@link Presenter} is an object, which takes the main control of views. Can either work with

@@ -1,5 +1,3 @@
-package com.yotadevices.viscera.di;
-
 /*
  * Copyright (C) 2016 Yota Devices LLC
  *
@@ -15,6 +13,7 @@ package com.yotadevices.viscera.di;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.yotadevices.viscera.di;
 
 import com.yotadevices.viscera.Presenter;
 import com.yotadevices.viscera.Screen;
