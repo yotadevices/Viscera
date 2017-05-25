@@ -13,17 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion targetVersion
+    buildToolsVersion buildVersion
 
     defaultConfig {
         applicationId "com.yotadevices.example"
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion targetVersion
         versionCode majorVersion
         versionName "${majorVersion}.${minorVersion}"
     }

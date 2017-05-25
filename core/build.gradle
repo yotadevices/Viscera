@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
@@ -51,11 +50,11 @@ publishing {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion targetVersion
+    buildToolsVersion buildVersion
     defaultConfig {
         minSdkVersion 1
-        targetSdkVersion 25
+        targetSdkVersion targetVersion
         versionCode majorVersion
         versionName "${majorVersion}.${minorVersion}"
     }
