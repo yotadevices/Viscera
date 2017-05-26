@@ -61,7 +61,7 @@ android {
 }
 
 dependencies {
-    compile 'com.squareup:javapoet:1.9.0'
+    compile 'com.github.javaparser:javaparser-core:3.2.5'
 }
 
 apply from: 'install.gradle'
