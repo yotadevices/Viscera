@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Yota Devices LLC
+ * Copyright (C) 2017 Yota Devices LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,4 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-include ':core', ':example', ':gen'
+package com.yotadevices.viscera;
+
+/**
+ * @author Vitalii Dmitriev
+ */
+public class Generator {
+    public static void main(String... args) {
+        // TODO: 5/29/17 implement a generator.
+    }
+}

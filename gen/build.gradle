@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Yota Devices LLC
+ * Copyright (C) 2017 Yota Devices LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-apply plugin: 'com.android.library'
+apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 ext {
@@ -21,10 +21,10 @@ ext {
     bintrayName      = 'viscera'
 
     publishedGroupId = 'com.yotadevices.viscera'
-    libName          = 'core'
-    artifact         = 'core'
+    libName          = 'gen'
+    artifact         = 'gen'
 
-    libDescription   = "Tiny MVP and Dependency Injection plugin for Android."
+    libDescription   = "Application structure generator."
 
     siteUrl          = 'https://github.com/yotadevices/Viscera'
     gitUrl           = 'https://github.com/yotadevices/Viscera.git'
@@ -49,16 +49,12 @@ publishing {
     }
 }
 
-android {
-    compileSdkVersion targetVersion
-    buildToolsVersion buildVersion
-    defaultConfig {
-        minSdkVersion 1
-        targetSdkVersion targetVersion
-        versionCode majorVersion
-        versionName "${majorVersion}.${minorVersion}"
-    }
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
 
 apply from: '../install.gradle'
 apply from: '../bintray.gradle'
